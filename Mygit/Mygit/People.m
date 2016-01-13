@@ -7,7 +7,13 @@
 //
 
 #import "People.h"
-
+//typedef int (^MySum)(int, int);
 @implementation People
+
+//MySum sum = ^(int a, int b){
+//    return a + b;
+//};
+
+
 
 @end

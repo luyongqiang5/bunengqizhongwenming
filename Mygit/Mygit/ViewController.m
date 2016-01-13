@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "People.h"
 @interface ViewController ()
 
 @end
@@ -17,6 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"mygit");
+    MySum s = ^(int a, int b){
+        return a+b;
+    };
+    NSLog(@"%d",s(5, 7));
 }
 
 - (void)didReceiveMemoryWarning {

@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface People : UIViewController
+typedef int (^MySum)(int, int);
+
 
 @end
