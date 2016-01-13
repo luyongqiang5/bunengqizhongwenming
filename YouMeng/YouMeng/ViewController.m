@@ -7,8 +7,8 @@
 //
 
 #import "ViewController.h"
-
-@interface ViewController ()
+#import "UMSocial.h"
+@interface ViewController () <UMSocialUIDelegate>
 
 @end
 
@@ -17,6 +17,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+}
+- (IBAction)btn1:(id)sender {
+    
+    [UMSocialSnsService presentSnsIconSheetView:self
+                                         appKey:@"5621be4167e58eeb28003566"
+                                      shareText:@"测试"
+                                     shareImage:[UIImage imageNamed:@"icon.gif"]
+                                shareToSnsNames:[NSArray arrayWithObjects:UMShareToSina,UMShareToQzone,UMShareToWechatSession,UMShareToQQ,nil]
+                                       delegate:self];
+}
+- (IBAction)btn2:(id)sender {
 }
 
 - (void)didReceiveMemoryWarning {
